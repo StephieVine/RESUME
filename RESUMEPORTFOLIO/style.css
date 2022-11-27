@@ -1,0 +1,1126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* general html body font */
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+    color: brown;
+}
+/* resume text color */
+a {
+    text-decoration: none;
+    color: brown;
+}
+/* this is for the body of hero container  */
+.container {
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* the background image */
+img{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+}
+
+/* all the paragraph writing under services services.container */
+#about .col-right p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    text-align: center;
+}
+
+/* hero backgound image section */
+#hero{
+background-image: url(./img/background.jpg);
+background-size: cover;
+background-position: top center;
+position: relative;
+z-index: 1;
+margin-bottom: 60px;
+}
+
+/* overlay back of  background picture */
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+/* for all the hero h1 and h2  */
+#hero h1{
+    left: -10%;
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    text-transform: capitalize;
+    /* color: transparent; */
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#hero h2{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    text-transform: capitalize;
+    /* color: transparent; */
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* for all the individual children under hero */
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3){
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#hero h2:nth-child(1){
+    animation-delay: 1s;
+}
+
+/* styling animation individual hero h1 and h2 span */
+
+#hero h1 span{
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 0;
+background-color: crimson;
+animation: text-reveal_box 1s ease;
+animation-delay: 1s;
+}
+
+#hero h2 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text-reveal_box 1s ease;
+    animation-delay: 1s;
+    }
+
+/* second styling of the hero individual children */
+#hero h1:nth-child(1) span{
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3) span{
+    /* animation: text_reveal_name .5s ease forwards; */
+    animation-delay: 3s;
+}
+
+#hero h2:nth-child(1) span{
+    animation-delay: 1.5s;
+}
+
+#hero h2:nth-child(2) span{
+    animation-delay: 2s;
+}
+#hero h2:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+/* styling the 'Resume' part */
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size:2rem;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+
+/* colors hovering the 'Resume' */
+.cta:hover {
+    color: lavenderblush;
+    background-color: crimson;
+    
+}
+
+
+    /* service section */
+    /* styling service part */
+/* #services {
+} */
+#services .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+/* h1 section-title part */
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    text-align: center;
+}
+
+/* service section span 'I' */
+.section-title span{
+    color: crimson;
+}
+
+/* #services .service-top p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+
+} */
+ /* styling the bottom */
+#services .service-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+ /* styling the box where the twitter logo is */
+#services .service-item{
+    flex-basis: 80%;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./img/pexels-jess-bailey-designs-876466.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* for giving transparency to the box where the twitter logo is which is called overlay */
+#services .service-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #293230 0%, #485563 100%);
+    opacity: .8;
+    z-index: -1;
+}
+
+/* working on the icon box to fit */
+/* #services .service-bottom .icon{
+    height: 50px;
+    width: 50;
+    margin-bottom: 20px;
+} */
+
+/* working on the twitter icon to fit */
+/* #services .service-bottom .icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+} */
+
+/* styling the h2 font 'web design' in the twitter icon box */
+/* #services .service-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+} */
+
+/* styling the paragraph font 'lorem' in the twitter icon box
+#services .service-item p{
+    color:white;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+} */
+
+
+/* project section */
+#projects{
+    margin-top: 5rem;
+}
+
+#projects .projects{
+    flex-direction: column;
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    padding: 100px;
+}
+
+#projects .projects-header h1{
+    margin-bottom: 50px;
+}
+
+#projects .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#projects .project-info{
+    padding: 60px;
+    flex-basis: 50%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #293230;
+}
+
+#projects .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+    
+    
+}
+
+#projects .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+    /* justify-content: center; */
+    
+}
+
+#projects .project-info p{
+    color: white;
+}
+
+#projects .project-item::after{
+    flex-basis: 20%;
+    height: 300px;
+    overflow: hidden;
+    /* width: 100%; */
+}
+#projects .project-img1::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color:black;
+    background-image: linear-gradient(60deg, #293236 0%, black);
+    opacity: .7;
+    /* width: 1000px; */
+}
+#projects .project-img1 img{
+    transition: .3s ease transform;
+    width: 250px;
+    background-color:black;
+    /* background-image: linear-gradient(60deg, #293236 0%, #485563);
+    opacity: .7; */
+    /* flex-basis: 1200%; */
+}
+#projects .project-item:hover .project-img1 img{
+    transform: scale(2.0);
+}
+
+#projects a{
+    color: black;
+}
+
+/* About section */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+/* #about .col-left{
+    width: 1000px;
+    height: 700px;
+}
+#about .col-right {
+    width: 250px;
+} */
+
+#about .col-right h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 40px;
+
+}
+
+#about .col-left p{
+    margin-top: 10px;
+}
+
+#about .col-left h2{
+    margin-top: 20px;
+    color: black;
+}
+
+#about .col-left h1{
+    margin-top: 20px;
+}
+
+#about .cta:hover a{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 8rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+
+#about .col-left .cta{
+    color: black;
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+#about .col-left .about-img{
+    position: relative;
+    height: 90%;
+    width: 100%;
+    /* border: 10px solid white; */
+}
+#about .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: 210px;
+    /* right: -80px; */
+    top:7px;
+    height: 98%;
+    width: 50%;
+    border: 8px solid crimson;
+    z-index: -1;
+}
+#contact{
+    margin-top: 40px;
+    /* background-image: url(./img/pexels-photo-910616.jpeg); */
+    background-color: floralwhite;
+    /* background-size: cover;  */
+    /* background-position: top center; */
+    /* position: relative; */
+}
+
+ 
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200;
+    margin: 0 auto;
+}
+
+#contact .contact-items{
+    width: 50%;
+}
+
+#contact .contact-item{
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0 black;
+}
+
+#contact .contact-item:hover{
+color: crimson;
+}
+
+#about{
+    margin-top: 50px;
+}
+
+#about h2{
+    margin-top: 30px;
+}
+
+/* #about p .list{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+    /* justify-content: center; */
+    
+/* } */ */
+
+/* #projects a{
+font-weight: 3rem;
+color: black;
+font-style: italic;
+} */
+
+/* end of about section */
+
+
+/* start of prof secton */
+
+/* #prof{
+    background-color: floralwhite;
+    padding: 100px;
+} */
+/* #prof .list1 p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+/* #prof .prof-head h2{
+    width: 1000px;
+    color: crimson;
+} */
+
+
+#prof .prof-head{
+    line-height: 30px;
+    left: 1%;
+    margin: 30px auto;
+    color: crimson;
+    font: 3em sans-serif;
+    font-weight: bold;
+
+}
+#real-proof .prof-head{
+    line-height: 30px;
+    left: 1%;
+    margin: 30px auto;
+    color: black;
+    font: 3em sans-serif;
+    font-weight: bold;
+}
+ /* sure safety nig */
+#prof .prof-list{
+    color:black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+/* #prof .prof-text .prof-list1 li{
+    color:crimson;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+} */
+/* 
+#prof.prof-text .prof-list2 li{
+    color:black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+#prof .prof-text .prof-list3 li{
+    color:black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+#prof .prof-text .prof-list4 li{
+    color:black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+} */
+
+#prof .prof-list li{
+font-weight: 0;
+}
+/* #prof .prof-list ul{
+    list-style-type: circle;
+} */
+
+/* #prof ul{
+    list-style-type: circle;
+} */
+
+dl{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+/* #prof .prof-list1 strong p li ul{
+    color: crimson;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+} */
+
+#prof .prof-head{
+    margin-top: 30px;
+}
+
+
+/* end of prof section */
+
+
+
+/* qualification start */
+img{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+}
+
+#qualy{
+    background-image: url(./img/qualification.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    }
+
+    /* overlay back of  background picture */
+#qualy::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+/* for all the hero h1 and h2  */
+#qualy h1{
+    left: -50%;
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    text-transform: capitalize;
+    /* color: transparent; */
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#qualy h2{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    text-transform: capitalize;
+    /* color: transparent; */
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* for all the individual children under hero */
+#qualy h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+#qualy h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+#qualy h1:nth-child(3){
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#qualy h2:nth-child(1){
+    animation-delay: 1s;
+}
+
+/* styling animation individual hero h1 and h2 span */
+
+#qualy h1 span{
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 0;
+background-color: crimson;
+animation: text-reveal_box 1s ease;
+animation-delay: 1s;
+}
+
+#qualy h2 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text-reveal_box 1s ease;
+    animation-delay: 1s;
+    }
+
+/* second styling of the hero individual children */
+#qualy h1:nth-child(1) span{
+    animation-delay: 1.5s;
+}
+
+#qualy h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+
+#qualy h1:nth-child(3) span{
+    /* animation: text_reveal_name .5s ease forwards; */
+    animation-delay: 3s;
+}
+
+#qualy h2:nth-child(1) span{
+    animation-delay: 1.5s;
+}
+
+#qualy h2:nth-child(2) span{
+    animation-delay: 2s;
+}
+#qualy h2:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+#qualify .prof-list5 li{
+    color:black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#qualify .section-title{
+    margin-top: 35px;
+}
+
+.cta1  nav{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 40px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+/* #hero nav .cta a{ } */
+
+#hero .cta1 {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size:1rem;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+
+/* colors hovering the 'Resume' */
+#hero .cta1:hover {
+    color: lavenderblush;
+    background-color: crimson;
+    
+}
+
+/* #prof p ul .prof-list{
+    list-style-position: inside;
+} */
+
+/* #hero .cta a{
+    position: sticky;
+
+} */
+
+/* qualification end */
+
+/* start of social */
+#footer{
+    background-image: linear-gradient(60deg, #293236 0%, #485563);
+    /* width: 2000px; */
+    /* margin-top: 1rem; */
+    margin-bottom: 2rem;
+    left: 0%; 
+
+}
+#footer .footer{
+    /* width: 1200px; */
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h1{
+    color: crimson;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer p{
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* end of social */
+/* transform the head name to animation */
+@keyframes text-reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+/* end of key frames */
+
+
+
+/* media toplet start */
+
+@media (max-width:1200px) {
+
+.cta{
+    font-size: 2.5rem;
+    padding: 20px 60px;
+}
+
+
+.cta1{
+    font-size: 2.5rem;
+    padding: 20px 60px;
+}
+
+h1.section-title {
+    font-size: 7rem;
+    /* margin-top: 29px; */
+}
+
+h2{
+    font-size: 5rem;
+}
+
+/* hero */
+#hero h1{
+    font-size: 5rem;
+}
+
+/* projects start */
+
+#projects{
+    margin-top: 3rem;
+    /* margin: 0; */
+}
+
+#projects .project-item{
+    
+    flex-direction: row;
+}
+
+#projects .project-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+#projects .projects-item{
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+}
+
+#projects .all-projects .project-info{
+    height: 100%;
+
+}
+
+#projects .all-projects .project-img{
+    height: 100%;
+    
+}
+
+#projects .all-projects .project-img1{
+    height: 100%;
+    
+}
+
+/* projects end */
+
+/* About start */
+
+/* #about{
+    margin-top: -10rem;
+} */
+
+/* #about .about{
+flex-direction: row;
+} */
+
+/* #about .about .col-left .about-img::after{
+    left: -45px;
+    top: 34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid crimson;
+
+} */
+/* #about .col-left{
+    width: 600px;
+    height: 400px;
+    /* padding-left: 50px;
+    padding-right: 100px;
+} */
+
+/* #about .col-right {
+    text-align: start;
+    padding: 30px;
+    width: 800px;
+} */
+
+/* #about h2{
+    
+    position: relative;
+} */
+
+/* About start */
+/* }
+
+@media (max-width:991px){
+    .cta{
+        font-size: 2rem;
+        padding: 20px 60px;
+    }
+
+    .cta1{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    
+    h1.section-title {
+        font-size: 7rem;
+        margin-top: 29px;
+    }
+    
+    h2{
+        font-size: 5rem;
+    } */
+    
+    /* hero */
+    /* #hero h1{
+        font-size: 5rem;
+    } */
+    
+    /* projects start */
+    
+    /* #projects{
+        margin-top: 65rem;
+        
+    } */
+    
+    /* #projects .project-item{
+        
+        flex-direction: row;
+    }
+    
+    #projects .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    
+    
+    #projects .projects-item{
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    #projects .all-projects .project-info{
+        height: 100%;
+    
+    }
+    
+    #projects .all-projects .project-img{
+        height: 100%;
+        
+    }
+    
+    #projects .all-projects .project-img1{
+        height: 100%;
+        
+    } */
+
+    /* projects end
+    
+
+    /* About start */
+    
+    /* #about{
+        margin-top: -10rem;
+    }
+    
+} */
+
+/* @media (max-width:706px){
+    .cta{
+        font-size: 2.5rem;
+        padding: 15px 50px;
+    }
+
+    .cta1{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    
+    h1.section-title {
+        font-size: 7rem;
+        margin-top: 29px;
+    }
+/*     
+    h2{
+        font-size: 9rem;
+    }
+    
+    /* hero */
+    #hero h1{
+        font-size: 7rem;
+    }
+    
+    /* projects start */
+    
+    #projects{
+        margin-top: 2rem;
+        /* margin: 0; */
+    }
+    
+    #projects .project-item{
+        
+        flex-direction: row;
+    }
+    
+    #projects .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    
+    
+    #projects .projects-item{
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    #projects .all-projects .project-info{
+        height: 100%;
+    
+    }
+    
+    #projects .all-projects .project-img{
+        height: 100%;
+        
+    }
+    
+    #projects .all-projects .project-img1{
+        height: 100%;
+        
+    }
+    
+    /* projects end */
+    
+    /* About start */
+    
+    /* #about{
+        margin-top: -10rem;
+    }
+    
+} */
+
+/* media tablet stop */
+}
